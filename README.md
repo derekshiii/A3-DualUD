@@ -82,7 +82,13 @@ python main_trainer_DualUD.py --trainer target_adapt_pseudo_label_trainer_uncert
 ```
 
 - **Note:** You must specify the trainer for this step using `target_adapt_pseudo_label_trainer_uncertain`.
+## ✅ TODO List
 
+- [ ] Upload the full source code to the repository
+- [ ] Add installation instructions and environment requirements
+- [ ] Provide usage examples and command-line arguments
+- [ ] Upload pre-trained checkpoints
+- [ ] Provide links to datasets or dataset preparation guide
 ## Citation
 
 If you find our work useful in your research, please consider citing our paper.
