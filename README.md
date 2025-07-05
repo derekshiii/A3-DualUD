@@ -78,7 +78,7 @@ python main_trainer_A3.py
 This step performs source-free domain adaptation using our proposed DualUD module.
 
 ```
-python main_trainer_DualUD.py --trainer target_adapt_pseudo_label_trainer_uncertain [arguments...]
+python main_trainer_DualUD.py
 ```
 
 - **Note:** You must specify the trainer for this step using `target_adapt_pseudo_label_trainer_uncertain`.
