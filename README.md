@@ -5,6 +5,8 @@ This repository contains the source code for our paper, "Source-Free Unsupervise
 
 ## Overview
 
+![](.\Overview.png)
+
 A3-DualUD is a novel framework designed for unsupervised domain adaptation (UDA) in medical image segmentation, specifically in a source-free setting. This means our method adapts a model pre-trained on a source modality to a target modality **without accessing the source data** during the adaptation phase. This approach is crucial for protecting data privacy in sensitive medical applications.
 
 The framework is built upon two key contributions:
@@ -22,7 +24,7 @@ Before you begin, ensure you have a suitable environment. We recommend:
 
 ## Data Preparation
 
-Please organize your dataset according to the following structure. For example, using the Abdomen dataset with CT and MR modalities. The processed Abdomen datasets can be accessed by https://drive.google.com/drive/folders/1vQSu_nqwDx6roVp9WsN1eiYjvdwXkpyf?usp=drive_link
+Please organize your dataset according to the following structure. For example, using the Abdomen dataset with CT and MR modalities. 
 
 ```
 /path/to/your/dataset/
@@ -49,7 +51,7 @@ Please organize your dataset according to the following structure. For example, 
 
 ## Usage
 
-The process involves three main stages: pre-training on the source domain, and then applying one of the two adaptation methods (A³ or DualUD).
+The process involves three main stages: pre-training on the source domain, and then applying one of the two adaptation methods (A³ or DualUD). The processed Abdomen datasets and checkpoints can be accessed by https://drive.google.com/drive/folders/1vQSu_nqwDx6roVp9WsN1eiYjvdwXkpyf?usp=drive_link
 
 ### Step 1: Pre-training on the Source Domain
 
