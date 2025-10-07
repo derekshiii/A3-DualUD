@@ -1,0 +1,60 @@
+# Experiment Specific
+experiment_name: 'DeepLab_Abdomen_MR2CT_Adapt_FixMatch_fold4_pseudo'
+data_root: '/media/dell/disk2/zhoujie/MICCAI23-deeplab_TCT/Abdome_data/'
+save_root: '/media/dell/disk2/zhoujie/MICCAI23-deeplab_TCT/target_adapt/'
+source_model_path: '/media/dell/disk2/zhoujie/MICCAI23-deeplab_TCT/target_adapt/DeepLab_Abdomen_MR2CT_Adapt_PFA_fold4/exp_0_time_2024-08-10 15-34-14/saved_models/best_model_step_65_dice_0.8254.pth'
+target_sites:
+- 'CT_fold4'
+resume_dir: ''
+continue_train: False
+total_epochs: 5
+
+random_seed: 999
+organ_list:
+- 'Spleen'
+- 'R.Kidney'
+- 'L.Kidney'
+- 'Liver'
+
+# Dataloader Setting
+patient_level_dataloader: False
+img_size:
+- 256
+- 256
+batch_size: 16
+num_workers: 8
+
+# Model 
+arch: 'DeepLab'
+use_prototype: False
+update_prototype: False
+use_ema: True
+ema_decay: 0.999
+input_dim: 3
+feat_dim: 32
+output_dim: 256
+num_classes: 5
+num_prototypes: 1
+
+# Optim parameters
+lr: 0.0001
+
+# Pseudo label parameters
+match_type: 'fixmatch'
+
+# for fixmatch
+p_cutoff: 0.9
+dice_ignore_index: 0
+# for softmatch
+use_dist_align: True
+per_class: True
+
+
+# display
+save_steps: 500
+eval_steps: 20
+display_steps: 40
+save_visuals: True
+
+# test
+test: False

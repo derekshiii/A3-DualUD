@@ -22,7 +22,7 @@ Before you begin, ensure you have a suitable environment. We recommend:
 
 ## Data Preparation
 
-Please organize your dataset according to the following structure. For example, using the Abdomen dataset with CT and MR modalities:
+Please organize your dataset according to the following structure. For example, using the Abdomen dataset with CT and MR modalities. The processed Abdomen datasets can be accessed by https://drive.google.com/drive/folders/1vQSu_nqwDx6roVp9WsN1eiYjvdwXkpyf?usp=drive_link
 
 ```
 /path/to/your/dataset/
@@ -66,10 +66,10 @@ python main_trainer_source.py
 This step performs source-free domain adaptation using our proposed A³ module.
 
 ```
-python main_trainer_A3.py
+python main_trainer_sfda.py --config_file configs/train_target_adapt_PFA.yaml
 ```
 
-- **Note:** It is crucial to specify the trainer for this step using `target_adapt_A3_trainer`.
+- **Note:** It is crucial to specify the trainer for this step using `target_adapt_PFA_trainer`.
 
 ------
 
@@ -78,24 +78,35 @@ python main_trainer_A3.py
 This step performs source-free domain adaptation using our proposed DualUD module.
 
 ```
-python main_trainer_DualUD.py
+python main_trainer_sfda.py --config_file configs/train_target_adapt_pseudo_label_uncertain.yaml
 ```
 
 - **Note:** You must specify the trainer for this step using `target_adapt_pseudo_label_trainer_uncertain`.
 ## ✅ TODO List
 
-- [ ] Upload the full source code to the repository
-- [ ] Add installation instructions and environment requirements
-- [ ] Provide usage examples and command-line arguments
-- [ ] Upload pre-trained checkpoints
-- [ ] Provide links to datasets or dataset preparation guide
+- [x] Upload the full source code to the repository
+- [x] Add installation instructions and environment requirements
+- [x] Provide usage examples and command-line arguments
+- [x] Provide links to datasets
 ## Citation
 
 If you find our work useful in your research, please consider citing our paper.
 
 ```
-
+@article{ZHOU2025109017,
+title = {A3-DualUD: Source-free unsupervised domain adaptation via anatomical anchor alignment and dual-path uncertainty denoising for cross-modality medical image segmentation},
+journal = {Computer Methods and Programs in Biomedicine},
+volume = {271},
+pages = {109017},
+year = {2025},
+issn = {0169-2607},
+doi = {https://doi.org/10.1016/j.cmpb.2025.109017},
+url = {https://www.sciencedirect.com/science/article/pii/S0169260725004341},
+author = {Jie Zhou and Yulong Shi and Lin Qi and Xue Jiang and Shouliang Qi and Wei Qian},
+}
 ```
 
 ## Acknowledgments
 
+Many thanks to these excellent opensource projects
+[ProtoContra](https://github.com/CSCYQJ/MICCAI23-ProtoContra-SFDA)

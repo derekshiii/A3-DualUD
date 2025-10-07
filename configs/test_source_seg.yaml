@@ -1,0 +1,48 @@
+# Experiment Specific
+experiment_name: 'DeepLab_Abdomen_CT_Seg_test'
+data_root: '/media/dell/disk2/zhoujie/MICCAI23-deeplab_TCT/Abdome_data/'
+save_root: '/media/dell/disk2/zhoujie/MICCAI23-deeplab_TCT/source_seg'
+source_model_path: '/media/dell/disk2/zhoujie/MICCAI23-deeplab_TCT/source_seg/DeepLab_Abdomen_MR_Seg/exp_8_time_2024-06-17 15-58-09/saved_models/best_model_epoch_28_dice_0.9240.pth'
+source_sites:
+- 'CT'
+resume_dir: ''
+continue_train: False
+total_epochs: 100
+random_seed: 999
+organ_list:
+- 'Spleen'
+- 'R.Kidney'
+- 'L.Kidney'
+- 'Liver'
+
+# Dataloader Setting
+img_size:
+- 256
+- 256
+batch_size: 16
+num_workers: 8
+
+# Model 
+arch: 'DeepLab'
+use_prototype: False
+update_prototype: False
+input_dim: 3
+feat_dim: 32
+output_dim: 256
+num_classes: 5
+
+# Optim parameters
+lr: 0.0001
+
+# Loss parameters
+ce_ignore_index: -1
+dice_ignore_index: 0
+
+# display
+save_epochs: 10
+eval_epochs: 1
+display_steps: 100
+save_visuals: True
+
+# test
+test: False
