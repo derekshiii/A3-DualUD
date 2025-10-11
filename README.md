@@ -5,7 +5,7 @@ This repository contains the source code for our paper, "Source-Free Unsupervise
 
 ## Overview
 
-![](.\Overview.png)
+![](./Overview.png)
 
 A3-DualUD is a novel framework designed for unsupervised domain adaptation (UDA) in medical image segmentation, specifically in a source-free setting. This means our method adapts a model pre-trained on a source modality to a target modality **without accessing the source data** during the adaptation phase. This approach is crucial for protecting data privacy in sensitive medical applications.
 
