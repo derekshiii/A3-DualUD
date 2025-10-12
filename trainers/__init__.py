@@ -1,6 +1,6 @@
 from .source_seg_trainer import SourceDomainTrainer
 from .source_seg_test import SourceDomainTest
-from .target_adapt_PFA_trainer import PFA_Trainer
+from .target_adapt_A3_trainer import A3_Trainer
 from .target_adapt_CL_trainer import CL_Trainer
 from .target_adapt_pseudo_label_trainer import PseudoLabel_Trainer
 from .target_adapt_pseudo_label_trainer_uncertain import PseudoLabel_Trainer2

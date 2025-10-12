@@ -1,7 +1,5 @@
 # A3-DualUD
-This repository contains the source code for our paper, "Source-Free Unsupervised Domain Adaptation via Anatomical Anchor Alignment and Dual-path Uncertainty Denoising for Cross-modality Medical Image Segmentation".
-
-> **Note:** The code will be made publicly available upon acceptance of the corresponding paper.
+This repository contains the source code for our paper: [Source-Free Unsupervised Domain Adaptation via Anatomical Anchor Alignment and Dual-path Uncertainty Denoising for Cross-modality Medical Image Segmentation](https://www.sciencedirect.com/science/article/abs/pii/S0169260725004341)
 
 ## Overview
 
@@ -68,10 +66,10 @@ python main_trainer_source.py
 This step performs source-free domain adaptation using our proposed A³ module.
 
 ```
-python main_trainer_sfda.py --config_file configs/train_target_adapt_PFA.yaml
+python main_trainer_sfda.py --config_file configs/train_target_adapt_A3.yaml
 ```
 
-- **Note:** It is crucial to specify the trainer for this step using `target_adapt_PFA_trainer`.
+- **Note:** It is crucial to specify the trainer for this step using `target_adapt_A3_trainer`.
 
 ------
 

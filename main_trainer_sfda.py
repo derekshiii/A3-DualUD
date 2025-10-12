@@ -2,7 +2,7 @@ import argparse
 import os
 import shutil
 import time
-from trainers import PFA_Trainer,CL_Trainer,PseudoLabel_Trainer
+from trainers import A3_Trainer,CL_Trainer,PseudoLabel_Trainer
 from trainers import PseudoLabel_Trainer2
 from trainers import PseudoLabel_Trainer3
 import json
@@ -66,7 +66,7 @@ if __name__ == '__main__':
     # trainer = PseudoLabel_Trainer2(opt)
     # trainer = PseudoLabel_Trainer3(opt)
     # First PFA stage
-    trainer = PFA_Trainer(opt)
+    trainer = A3_Trainer(opt)
     # Then CL stage
     # trainer = CL_Trainer(opt)
     trainer.launch()

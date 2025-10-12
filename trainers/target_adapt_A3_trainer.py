@@ -19,7 +19,7 @@ import pdb
 from skimage import io
 
 
-class PFA_Trainer():
+class A3_Trainer():
     def __init__(self, opt):
         self.opt = opt
     
